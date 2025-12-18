@@ -14,3 +14,4 @@ memory_profiler
 setuptools
 librosa
 clip
+qdrant-client
