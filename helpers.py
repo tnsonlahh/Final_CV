@@ -1,7 +1,7 @@
 import torch
-from PIL import Image
 from transformers import CLIPModel, CLIPProcessor
-import matplotlib.pyplot as plt
+from PIL import Image
+
 # ================= CONFIG =================
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -42,30 +42,3 @@ def get_text_embedding(text: str):
 
     return emb.cpu().numpy()[0]
 
-def visualize_results(results, n_rows=4, n_cols=5):
-    """
-    Display retrieved images in a grid with product titles
-    """
-    assert n_rows * n_cols >= len(results), "Grid too small for number of results"
-
-    plt.figure(figsize=(4 * n_cols, 4 * n_rows))
-
-    for i, hit in enumerate(results):
-        image_path = hit.payload["image_path"]
-        title = hit.payload.get("title", "No title")
-
-        try:
-            img = Image.open(image_path).convert("RGB")
-        except Exception as e:
-            print(f"Cannot load image {image_path}: {e}")
-            continue
-
-        plt.subplot(n_rows, n_cols, i + 1)
-        plt.imshow(img)
-        plt.axis("off")
-
-        # wrap title cho khỏi dài
-        plt.title(title, fontsize=9, wrap=True)
-
-    plt.tight_layout()
-    plt.show()

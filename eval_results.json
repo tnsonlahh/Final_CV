@@ -1,0 +1,72 @@
+[
+  {
+    "query": "men white sports shoes",
+    "top_k": 15,
+    "avg_score": 0.91,
+    "top1_score": 1.0,
+    "full_match_ratio": 0.73
+  },
+  {
+    "query": "boys white casual tshirts",
+    "top_k": 15,
+    "avg_score": 0.96,
+    "top1_score": 1.0,
+    "full_match_ratio": 0.87
+  },
+  {
+    "query": "men black casual shoes",
+    "top_k": 15,
+    "avg_score": 0.88,
+    "top1_score": 1.0,
+    "full_match_ratio": 0.47
+  },
+  {
+    "query": "women black casual heels",
+    "top_k": 15,
+    "avg_score": 0.8,
+    "top1_score": 0.9,
+    "full_match_ratio": 0.0
+  },
+  {
+    "query": "boys red casual tshirts",
+    "top_k": 15,
+    "avg_score": 0.88,
+    "top1_score": 1.0,
+    "full_match_ratio": 0.6
+  },
+  {
+    "query": "boys yellow casual tshirts",
+    "top_k": 15,
+    "avg_score": 0.99,
+    "top1_score": 1.0,
+    "full_match_ratio": 0.93
+  },
+  {
+    "query": "boys green casual tshirts",
+    "top_k": 15,
+    "avg_score": 0.97,
+    "top1_score": 1.0,
+    "full_match_ratio": 0.87
+  },
+  {
+    "query": "men brown casual shoes",
+    "top_k": 15,
+    "avg_score": 0.93,
+    "top1_score": 0.8,
+    "full_match_ratio": 0.67
+  },
+  {
+    "query": "boys blue casual tshirts",
+    "top_k": 15,
+    "avg_score": 0.95,
+    "top1_score": 1.0,
+    "full_match_ratio": 0.73
+  },
+  {
+    "query": "girls white casual tops",
+    "top_k": 15,
+    "avg_score": 0.95,
+    "top1_score": 1.0,
+    "full_match_ratio": 0.87
+  }
+]
