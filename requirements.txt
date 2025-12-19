@@ -14,4 +14,8 @@ memory_profiler
 setuptools
 librosa
 clip
-qdrant-client
+gradio>=3.0
+qdrant-client>=1.4
+python-dotenv
+# optional
+# faiss-cpu

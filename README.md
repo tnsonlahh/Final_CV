@@ -1,9 +1,43 @@
-Giải thích file:
-- helpers.py: có mấy hàm lấy embedding
-- main: chạy process local, trả ra ảnh opencv
-- main2: file ngu kệ nó đi 
-- preprocessing_metadata: clean cái file meta gốc là fashion.csv
-- upload_to_qdrant: up cái metadata kia kèm theo embedding của ảnh và title lên DB (cần chạy docker tạo qdrant đã cái này gen chat 1 dòng)
-- .json: file kết quả khi test với 10 queries (cũng hơi tà đạo tí)
-- evaluate: file tạo json kia kìa, mấy cái metric muốn hiểu thì gen chat file này chứ tôi lwofi viết tử tế lắm :))
-gudluck
+# CLIP-based Fashion Retrieval with Qdrant
+
+This project implements a **fashion product retrieval system** using **CLIP embeddings** and **Qdrant vector database**.  
+The system supports:
+
+- Text → Image retrieval  
+- Text → Image + Title (hybrid) retrieval  
+- Local evaluation using metadata-based pseudo ground truth  
+- Interactive UI with Gradio  
+
+---
+How to Run
+1️⃣ Clone the repository
+git clone https://github.com/tnsonlahh/Final_CV.git
+cd Final_CV
+
+2️⃣ Start Qdrant
+docker compose up -d
+Qdrant API: http://localhost:6333
+Qdrant Dashboard: http://localhost:6333/dashboard
+
+3️⃣ Install Python dependencies
+pip install -r requirements.txt
+
+4️⃣ Preprocess metadata
+Open and run:
+preprocessing_metadata.ipynb
+
+5️⃣ Upload data to Qdrant
+python upload_to_qdrant.py
+
+6️⃣ Run local retrieval pipeline
+python main.py
+
+
+Input: text query
+Output: top-K retrieved images from Qdrant
+
+7️⃣ Run Gradio demo UI
+python gradio_app.py
+
+
+Open the Gradio link printed in terminal to try interactive search.
